@@ -1,0 +1,13 @@
+GET HTTP://localhost:8080/api/produtos
+
+
+
+POST HTTP://localhost:8080/api/produtos
+Content-Type: application/json
+{
+    "nome": "Churrasqueira Eletrica",
+    "descricao": "Ta pegando fogo, bicho",
+    "valor": 2199.9,
+    "quantidadeEstoque": 5
+}
+
