@@ -1,0 +1,43 @@
+GET HTTP://localhost:8080/api/enderecos
+
+###
+GET HTTP://localhost:8080/api/enderecos/1
+
+###
+
+POST HTTP://localhost:8080/api/enderecos
+Content-Type: application/json
+
+{
+    "rua": "Rua judith Mauricio de Paula",
+    "cep": 25964220,
+    "numero": 291,
+    "cidade": "teresopolis",
+    "estado": "Rio de Janeiro",
+    "cliente": {
+        "id": 1
+    }
+}
+
+###
+
+PUT HTTP://localhost:8080/api/enderecos/1
+Content-Type: application/json
+
+{
+    "rua": "Rua judith Mauricio de Paula",
+    "cep": 25964220,
+    "numero": 291,
+    "cidade": "teresopolis",
+    "estado": "Rio de Janeiro",
+    "id_cliente": 3
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/enderecos/2
+
+
+
+
+

@@ -6,42 +6,42 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.desafio.model.Produto;
-import com.example.desafio.repository.ProdutoRepository;
+import com.example.desafio.model.Cliente;
+import com.example.desafio.repository.ClienteRepository;
 
 @Service
-public class ProdutoService  {
+public class ClienteService  {
     
     @Autowired
-    private ProdutoRepository produtoRepository;
+    private ClienteRepository clienteRepository;
 
-    public Produto adicionar(Produto produto){
+    public Cliente adicionar(Cliente cliente){
 
-        return produtoRepository.save(produto);
+        return clienteRepository.save(cliente);
     }
 
-    public List<Produto> obterTodos(){
-        return produtoRepository.findAll();
+    public List<Cliente> obterTodos(){
+        return clienteRepository.findAll();
     }
     
-    public Produto obterPorId(Long id){
-        Optional<Produto> optProduto = produtoRepository.findById(id);
+    public Cliente obterPorId(Long id){
+        Optional<Cliente> optCliente = clienteRepository.findById(id);
 
-        if(optProduto.isEmpty()){
-            throw new IllegalArgumentException("Não existe um produto com o ID " + id);
+        if(optCliente.isEmpty()){
+            throw new IllegalArgumentException("Não existe um cliente com o ID " + id);
         }
 
-        return optProduto.get();
+        return optCliente.get();
     }
 
-    public Produto atualizar(long id, Produto produto){
+    public Cliente atualizar(long id, Cliente cliente){
 
-        produto.setId(id);
-        return produtoRepository.save(produto);
+        cliente.setId(id);
+        return clienteRepository.save(cliente);
     }
 
     public void deletar(long id){
-        produtoRepository.deleteById(id);
+        clienteRepository.deleteById(id);
     }
 
 }

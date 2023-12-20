@@ -1,10 +1,15 @@
 package com.example.desafio.model;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 
 
 
@@ -27,6 +32,10 @@ public class Produto {
     private Integer quantidadeEstoque;
 
     private String descricao;
+
+    @OneToMany(mappedBy = "produto")
+    @JsonManagedReference
+    private List<Categoria> categoria;
 
 
     public Long getId() {
@@ -67,6 +76,14 @@ public class Produto {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public List<Categoria> getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(List<Categoria> categoria) {
+        this.categoria = categoria;
     }
 
 

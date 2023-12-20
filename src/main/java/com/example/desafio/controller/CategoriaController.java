@@ -13,45 +13,45 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.desafio.model.Cliente;
-import com.example.desafio.service.ClienteService;
+import com.example.desafio.model.Categoria;
+import com.example.desafio.service.CategoriaService;
 
 @RestController
-@RequestMapping("/api/clientes")
+@RequestMapping("/api/categorias")
 @CrossOrigin("*")
-public class ClienteController  {
+public class CategoriaController  {
 
     @Autowired
-    private ClienteService clienteService;
+    private CategoriaService categoriaService;
     
     @GetMapping
-    public List<Cliente> obterTodos(){
+    public List<Categoria> obterTodos(){
 
-        return clienteService.obterTodos();
+        return categoriaService.obterTodos();
     }
 
     @GetMapping("/{id}")
-    public Cliente obterPorId(@PathVariable long id){
+    public Categoria obterPorId(@PathVariable long id){
 
-        return clienteService.obterPorId(id);
+        return categoriaService.obterPorId(id);
     }
 
     @PostMapping
-    public Cliente adicionar(@RequestBody Cliente cliente){
-        return clienteService.adicionar(cliente);
+    public Categoria adicionar(@RequestBody Categoria categoria){
+        return categoriaService.adicionar(categoria);
 
     }
     
     
     @PutMapping("/{id}")
-    public Cliente atualizar(@PathVariable Long id, @RequestBody Cliente cliente){
-        return clienteService.atualizar(id, cliente);
+    public Categoria atualizar(@PathVariable Long id, @RequestBody Categoria categoria){
+        return categoriaService.atualizar(id, categoria);
     }
 
 
     @DeleteMapping("/{id}")
     public void deletar(@PathVariable Long id){
-        clienteService.deletar(id);
+        categoriaService.deletar(id);
     }
 }
 

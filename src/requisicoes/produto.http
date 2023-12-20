@@ -1,13 +1,37 @@
 GET HTTP://localhost:8080/api/produtos
 
+###
+GET HTTP://localhost:8080/api/produtos/1
 
+###
 
 POST HTTP://localhost:8080/api/produtos
 Content-Type: application/json
+
 {
-    "nome": "Churrasqueira Eletrica",
-    "descricao": "Ta pegando fogo, bicho",
-    "valor": 2199.9,
-    "quantidadeEstoque": 5
+    "nomeProduto": "Toptherm",
+    "descricao": "É isso mesmo, Omega 3, Regina",
+    "valor": 199.9,
+    "quantidadeEstoque": 10
 }
+
+###
+
+PUT HTTP://localhost:8080/api/produtos/2
+Content-Type: application/json
+
+{
+    "nomeProduto": "Toptherm 2",
+    "descricao": "Omega 3, Regina",
+    "valor": 199.9,
+    "quantidadeEstoque": 10
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/produtos/2
+
+
+
+
 

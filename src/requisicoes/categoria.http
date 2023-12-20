@@ -1,0 +1,36 @@
+GET HTTP://localhost:8080/api/categorias
+
+###
+GET HTTP://localhost:8080/api/categorias/1
+
+###
+
+POST HTTP://localhost:8080/api/categorias
+Content-Type: application/json
+
+{
+    "tipo": "Eletronicos",
+    "produto": {
+        "id": 1
+    }
+}
+
+###
+
+PUT HTTP://localhost:8080/api/categorias/1
+Content-Type: application/json
+
+{
+    "nomeCliente": "Pedro Pinheiro",
+    "cpf": "12345678910",
+    "email": "pedro@gmail.com"
+}
+
+###
+
+DELETE HTTP://localhost:8080/api/categorias/2
+
+
+
+
+
