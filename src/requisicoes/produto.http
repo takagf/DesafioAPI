@@ -5,25 +5,29 @@ GET HTTP://localhost:8080/api/produtos/1
 
 ###
 
+GET http://localhost:8080/api/produtos/categoria/2
+
+### 
+
 POST HTTP://localhost:8080/api/produtos
 Content-Type: application/json
 
 {
-    "nomeProduto": "Toptherm",
-    "descricao": "É isso mesmo, Omega 3, Regina",
-    "valor": 199.9,
-    "quantidadeEstoque": 10
+    "nomeProduto": "Mesa de Jantar",
+    "descricao": "Mesa de madeira",
+    "valor": 899.9,
+    "quantidadeEstoque": 30
 }
 
 ###
 
-PUT HTTP://localhost:8080/api/produtos/2
+PUT HTTP://localhost:8080/api/produtos/1
 Content-Type: application/json
 
 {
-    "nomeProduto": "Toptherm 2",
-    "descricao": "Omega 3, Regina",
-    "valor": 199.9,
+    "nomeProduto": "Fone de ouvido",
+    "descricao": "Fone AirPods Apple",
+    "valor": 1299.9,
     "quantidadeEstoque": 10
 }
 

@@ -1,7 +1,7 @@
 GET HTTP://localhost:8080/api/clientes
 
 ###
-GET HTTP://localhost:8080/api/clientes/1
+GET HTTP://localhost:8080/api/clientes/2
 
 ###
 
@@ -9,25 +9,25 @@ POST HTTP://localhost:8080/api/clientes
 Content-Type: application/json
 
 {
-    "nomeCliente": "Joao",
-    "cpf": "12345678913",
-    "email": "j@gmail.com"
+    "nomeCliente": "Guilherme",
+    "cpf": "12345678914",
+    "email": "guilherme@gmail.com"
 }
 
 ###
 
-PUT HTTP://localhost:8080/api/clientes/1
+PUT HTTP://localhost:8080/api/clientes/4
 Content-Type: application/json
 
 {
-    "nomeCliente": "Pedro Pinheiro",
-    "cpf": "12345678910",
-    "email": "pedro@gmail.com"
+    "nomeCliente": "Guilherme",
+    "cpf": "12345678915",
+    "email": "guilherme@gmail.com"
 }
 
 ###
 
-DELETE HTTP://localhost:8080/api/clientes/2
+DELETE HTTP://localhost:8080/api/clientes/4
 
 
 

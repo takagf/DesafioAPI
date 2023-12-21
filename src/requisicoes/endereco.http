@@ -9,13 +9,13 @@ POST HTTP://localhost:8080/api/enderecos
 Content-Type: application/json
 
 {
-    "rua": "Rua judith Mauricio de Paula",
-    "cep": 25964220,
-    "numero": 291,
+    "rua": "Rua Carmela",
+    "cep": 25963140,
+    "numero": 139,
     "cidade": "teresopolis",
     "estado": "Rio de Janeiro",
     "cliente": {
-        "id": 1
+        "id": 5
     }
 }
 
